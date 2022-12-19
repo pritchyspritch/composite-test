@@ -14,12 +14,12 @@ runs:
       run: |
         ls -la
         pwd
-        cat ./README.md
+        cat ${{ github.action_path }}/README.md
         echo "The test param says: ${{ inputs.test-param }}"
         python -m venv venv
         source venv/bin/activate
         ls -la
         pwd
-        pip install -r ./requirements.txt
-        python test.py        
+        pip install -r ${{ github.action_path }}/requirements.txt
+        python ${{ github.action_path }}/test.py        
       shell: bash
