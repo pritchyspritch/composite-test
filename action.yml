@@ -13,6 +13,6 @@ runs:
       run: |
         ls -la
         pwd
-        cat readme.md
+        cat ./README.md
         echo "The test param says: ${{ inputs.test-param }}"
       shell: bash
